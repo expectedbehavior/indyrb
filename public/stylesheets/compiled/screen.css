@@ -423,8 +423,8 @@ body.three-col {
   background-color: #cfcfcf;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif; }
   /* line 38, ../../../app/stylesheets/screen.sass */
-  body.three-col p {
-    margin-bottom: 1em; }
+  body.three-col h2 {
+    margin-bottom: 0.5em; }
   /* line 41, ../../../app/stylesheets/screen.sass */
   body.three-col #container {
     width: 950px;
