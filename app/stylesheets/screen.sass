@@ -51,13 +51,16 @@ body.three-col
   #container
     +round(4px)
     +bgc(!white)
-    +mtop(!blueprint_grid_width + !blueprint_grid_margin)
+    +mtop(!col_width)
+    +mbot(!col_width)
     #header
       +prepend(1)
-      +ptop(!blueprint_grid_width + !blueprint_grid_margin)
+      +ptop(!col_width)
       #logo
         +column(16)
     #content
       +prepend(1)
+      +pbot(!col_width)
 
       #lolwut
+        
