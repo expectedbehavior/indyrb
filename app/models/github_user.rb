@@ -1,15 +1,8 @@
 class GithubUser < ActiveRecord::Base
   has_one :user
+  delegate :repositories, :to => :github_api_user
   
   def github_api_user
-    GitHub::API.user(self.name)
-  end
-
-  def method_missing(method)
-    if github_api_user.respond_to? method
-      github_api_user.send method
-    else
-      super
-    end
+    GitHub::API.user(read_attribute("name"))
   end
 end
