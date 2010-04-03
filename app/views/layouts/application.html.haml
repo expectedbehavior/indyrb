@@ -11,6 +11,11 @@
     #container
 
       #header
+        %ul#menu
+          =tab_for(:home, root_url, :label => 'home')
+          =tab_for(:members, root_url, :label => 'members')
+          =tab_for(:blogs, root_url, :label => 'blogs')
+
         #logo
           = link_to image_tag("indyrb_logo.png", :alt => "indy.rb - The Indianapolis Ruby Brigade"), [:root]
         #meetup
