@@ -1,0 +1,10 @@
+%h1
+  Edit feed
+- semantic_form_for(@feed, :url => admin_feed_path(@feed)) do |f|
+  = f.error_messages
+  = f.input :feed_title
+  = f.input :feed_uri, :as => :string
+  = f.buttons
+
+= link_to 'Back', feeds_path
+
