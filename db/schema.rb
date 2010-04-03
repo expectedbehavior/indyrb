@@ -9,7 +9,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100403191804) do
+ActiveRecord::Schema.define(:version => 20100403195808) do
+
+  create_table "feeds", :force => true do |t|
+    t.string   "feed_title"
+    t.text     "feed_uri"
+    t.datetime "rss_updated_at"
+    t.text     "post_title"
+    t.text     "post_content"
+    t.text     "post_link"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email"
