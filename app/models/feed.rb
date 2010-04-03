@@ -1,4 +1,11 @@
 class Feed < ActiveRecord::Base
+  
+  validates_presence_of   :feed_title
+  validates_presence_of   :feed_uri
+  validates_uniqueness_of :feed_uri
+  
+  after_create :get_latest_entry
+  
   def self.import
     self.all.map(&:get_latest_entry)
   end
