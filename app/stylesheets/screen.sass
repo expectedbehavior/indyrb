@@ -7,6 +7,12 @@
 // Import the non-default scaffolding module.
 @import blueprint/modules/scaffolding.sass
 
+@import partials/colors.sass
+
+@import partials/spacing.sass
+
+@import partials/round.sass
+
 // To generate css equivalent to the blueprint css but with your configuration applied, uncomment:
 // +blueprint
 
@@ -24,6 +30,9 @@ form.bp
 
 // Page layout can be done using mixins applied to your semantic classes and IDs:
 body.three-col
+  +bgc(!m_grey)
+  :font-family "Helvetica Neue", Arial, Helvetica, sans-serif
+  :font-size 75%
   #container
     +container
   #header, #footer
@@ -38,3 +47,17 @@ body.three-col
     !content_columns = ceil(2 * !blueprint_grid_columns / 3)
     // true means it's the last column in the row
     +column(!content_columns, true)
+
+  #container
+    +round(4px)
+    +bgc(!white)
+    +mtop(!blueprint_grid_width + !blueprint_grid_margin)
+    #header
+      +prepend(1)
+      +ptop(!blueprint_grid_width + !blueprint_grid_margin)
+      #logo
+        +column(16)
+    #content
+      +prepend(1)
+
+      #lolwut
