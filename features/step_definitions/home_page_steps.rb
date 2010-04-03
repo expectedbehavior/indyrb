@@ -12,7 +12,11 @@ Then /^I should see the sponsors$/ do
 end
 
 Then /^I should see the next meeting$/ do
-  within("#nextmeeting") do |content|
-    content.should contain("Upcoming")
+  pending
+  within("#next_meeting") do |content|
+    content.should contain("Next Meeting")
+    content.should have_tag("h3[class=?]", 'when')
+    content.should have_tag("a[class=?]", 'link', 'RSVP @ Meetup.com')
+    content.should have_tag("div[class=?]", 'description')
   end
 end
