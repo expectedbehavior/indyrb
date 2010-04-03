@@ -1,3 +1,5 @@
 factory_girl
 compass
 haml-edge
+rfeedparser
+formtastic
