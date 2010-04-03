@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100403224106) do
+ActiveRecord::Schema.define(:version => 20100403234140) do
 
   create_table "feeds", :force => true do |t|
     t.string   "feed_title"
@@ -47,7 +47,6 @@ ActiveRecord::Schema.define(:version => 20100403224106) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
-    t.string   "github"
     t.string   "twitter"
     t.string   "meetup"
     t.boolean  "admin"
