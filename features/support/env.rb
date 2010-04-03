@@ -61,3 +61,4 @@ end
 # Load support files
 $: << File.dirname(__FILE__)
 require 'sponsors'
+require 'html_response'

@@ -1,0 +1,18 @@
+nFrame:
+  name: n|Frame
+  image: nframe.gif
+  url: http://www.nframe.com/
+  desc:
+    <a href="http://www.nframe.com" target="_blank">nFrame</a> n|Frame has 15 years of experience providing professional technology infrastructure services to Indianapolis and Indiana organizations of all sizes.  These services include data center services, network management, commercial Internet broadband access, managed IT services, SAN solutions, disaster recovery, cloud computing and server virtualization.
+new_relic:
+  name: New Relic
+  image: new_relic.gif
+  url: http://www.newrelic.com/
+  desc:
+    <a href="http://www.newrelic.com/RPM.html" target="_blank">New Relic RPM</a> is a Ruby on Rails Performance Management solution that enables developers to quickly and cost effectively detect, diagnose, and fix application performance problems in real time. <a href='http://www.newrelic.com'>www.NewRelic.com</a>
+ff:
+  name: Fastest Forward
+  image: fastest_forward.jpg
+  url: http://www.fastestforward.com/
+  desc:
+    Fastest Forward specialize in delivering high quality software quickly. By using the latest proven technologies, Fastest Forward can assemble reliable systems in a fraction of the time and cost.

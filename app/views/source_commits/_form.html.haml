@@ -1,0 +1,24 @@
+- form_for(source_commit) do |f|
+  = f.error_messages
+  %p
+    = f.label :url
+    %br
+    = f.text_area :url
+  %p
+    = f.label :project_name
+    %br
+    = f.text_field :project_name
+  %p
+    = f.label :user
+    %br
+    = f.text_field :user
+  %p
+    = f.label :message
+    %br
+    = f.text_area :message
+  %p
+    = f.label :committed_date
+    %br
+    = f.datetime_select :committed_date
+  %p
+    = f.submit "Submit"

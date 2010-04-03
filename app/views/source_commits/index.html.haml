@@ -1,0 +1,8 @@
+%h2 Listing source_commits
+- if !@source_commits.empty?
+  .source_commits
+    = render :partial => "source_commit", :collection => @source_commits
+  = will_paginate(@source_commits)
+- else
+  %p There are no source_commits to show yet.
+= link_to 'New source_commit', new_source_commit_path

@@ -21,7 +21,7 @@ require File.join(File.dirname(__FILE__), 'boot')
 Rails::Initializer.run do |config|
   config.gem 'factory_girl', :source => 'http://gemcutter.org'
   config.gem 'compass'
-#  config.gem 'rfeedparser'
+  config.gem 'ruby-github'
   config.gem 'formtastic'
   config.gem 'feed-normalizer'
 
@@ -57,3 +57,6 @@ Rails::Initializer.run do |config|
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
 end
+
+
+require File.join("#{RAILS_ROOT}/lib", 'patches/string')

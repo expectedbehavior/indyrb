@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  url: MyText
+  project_name: MyString
+  user: 
+  message: MyText
+  committed_date: 2010-04-03 16:05:51
+
+two:
+  url: MyText
+  project_name: MyString
+  user: 
+  message: MyText
+  committed_date: 2010-04-03 16:05:51

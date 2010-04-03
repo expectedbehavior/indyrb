@@ -1,0 +1,4 @@
+%h2 New github_user
+= render :partial => "form", :locals => {:github_user => @github_user}
+%ul
+  %li= link_to 'Back', github_users_path
