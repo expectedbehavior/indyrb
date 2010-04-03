@@ -9,7 +9,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100403000852) do
+ActiveRecord::Schema.define(:version => 20100403200551) do
+
+  create_table "source_commits", :force => true do |t|
+    t.text     "url"
+    t.string   "project_name"
+    t.integer  "user_id"
+    t.text     "message"
+    t.datetime "committed_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email"
@@ -18,6 +28,10 @@ ActiveRecord::Schema.define(:version => 20100403000852) do
     t.string   "persistence_token"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
+    t.string   "github"
+    t.string   "twitter"
+    t.string   "meetup"
   end
 
 end
