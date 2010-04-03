@@ -22,6 +22,9 @@ Rails::Initializer.run do |config|
   config.gem 'factory_girl', :source => 'http://gemcutter.org'
   config.gem 'compass'
   config.gem 'ruby-github'
+  config.gem 'rfeedparser'
+  config.gem 'formtastic'
+
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers
   # -- all .rb files in that directory are automatically loaded.

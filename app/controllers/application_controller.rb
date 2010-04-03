@@ -13,6 +13,11 @@ class ApplicationController < ActionController::Base
   filter_parameter_logging :password
 
   private
+
+  helper_method :testing?
+  def testing?
+    !%W(production development).include?(Rails.env)
+  end
  
   def current_user_session
     return @current_user_session if defined?(@current_user_session)

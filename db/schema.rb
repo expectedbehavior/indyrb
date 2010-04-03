@@ -11,6 +11,17 @@
 
 ActiveRecord::Schema.define(:version => 20100403224106) do
 
+  create_table "feeds", :force => true do |t|
+    t.string   "feed_title"
+    t.text     "feed_uri"
+    t.datetime "rss_updated_at"
+    t.text     "post_title"
+    t.text     "post_content"
+    t.text     "post_link"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "github_users", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
@@ -39,6 +50,7 @@ ActiveRecord::Schema.define(:version => 20100403224106) do
     t.string   "github"
     t.string   "twitter"
     t.string   "meetup"
+    t.boolean  "admin"
     t.integer  "github_user_id"
   end
 

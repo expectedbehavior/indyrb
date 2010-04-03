@@ -1,4 +1,37 @@
-%h2 User List
-%ul
-- @users.each do |u|
-  %li= u.email
+%style{ :type => 'text/css' }
+  :sass
+    .members
+      padding: 2em
+    .profile
+      height: 80px
+      margin-top: 1em
+      border: 1px solid #000
+      clear: both
+      .image
+        float: left
+        background-image: url(/images/gravitar_bg.png)
+        background-repeat: no-repeat
+        width: 80px
+        height: 80px
+        margin-right: 1em
+      .name
+        font-weight: bold
+        font-size: 120%
+        padding: .8em
+
+.members
+  %h2 Members
+  - @users.each do |u|
+    .profile
+      .image
+        - if u.gravatar_url
+          %img{ :src => u.gravatar_url, :width => 80, :height => 80 }
+      .name
+        = u.name
+      .links
+        = link_to 'Twitter', u.twitter_url if u.twitter_url
+        = link_to 'Github', u.github_url if u.github_url
+        = link_to 'Meetup', u.meetup_url if u.meetup_url
+
+
+

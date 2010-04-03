@@ -7,6 +7,7 @@
 // Import the non-default scaffolding module.
 @import blueprint/modules/scaffolding.sass
 
+@import compass/utilities.sass
 @import compass/utilities/lists.sass
 
 @import partials/colors.sass
@@ -45,23 +46,49 @@ body.three-col
     +mtop(!col_width)
     +mbot(!col_width)
 
-  #header, #footer
-    +column(!blueprint_grid_columns - 2)
-    +prepend(1)
-    +append(1)
-    #logo
-      +column(18)
+    #header, #footer
+      +column(!blueprint_grid_columns - 2)
+      +prepend(1)
+      +append(1)
+      #logo
+        +column(18)
 
-  #header
-    +ptop(!col_width)
-    #meetup
-      a
-        :text-decoration none
-        :font-size 1.25em
-        img
-          :position relative
-          :top 15px
-          :left 3px
+    #header
+      +ptop(!col_width)
+
+      ul#menu
+        +horizontal-list
+        :padding 0
+        :margin -30px 0 15px 0
+        :border-bottom 1px solid #d0d0d0
+
+        li.current_tab a, li.current_tab a:visited
+          :background-color #d0d0d0
+          :color #f0f0f0
+
+        li
+          :font-size 18px
+          :padding 10px 5px 0 5px
+
+          a, a:visited
+            :padding 5px
+            :text-decoration none
+            :color #999
+            +round-top(4px)
+
+            &:hover
+              :background-color #d0d0d0
+              :color #f0f0f0
+
+      #meetup
+        a
+          :text-decoration none
+          :font-size 1.25em
+          img
+            :position relative
+            :top 15px
+            :left 3px
+
   #footer
     +bgc(!taupe)
     +ptop(!col_width/4)
@@ -102,3 +129,14 @@ body.three-col
       +column(!sidebar_columns - 2)
       +bgc(!l_grey)
       +round(4px)
+      .map
+        A
+          :display block
+          :position relative
+          :overflow hidden
+          width = !col_width * (!sidebar_columns - 3)
+          height = !col_width * (!sidebar_columns - 3)
+          IMG
+            :position absolute
+            :left -25%
+            :top -25%

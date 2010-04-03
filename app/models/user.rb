@@ -23,7 +23,7 @@ class User < ActiveRecord::Base
     twitter.present? ? "http://twitter.com/#{twitter}" : nil
   end
 
-  def gravitar_url
+  def gravatar_url
     email.present? ? "http://www.gravatar.com/avatar/#{Digest::MD5.hexdigest(email.downcase)}" : nil
   end
 
