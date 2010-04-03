@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100403195808) do
+ActiveRecord::Schema.define(:version => 20100403211105) do
 
   create_table "feeds", :force => true do |t|
     t.string   "feed_title"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(:version => 20100403195808) do
     t.string   "github"
     t.string   "twitter"
     t.string   "meetup"
+    t.boolean  "admin"
   end
 
 end
