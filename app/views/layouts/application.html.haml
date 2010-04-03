@@ -12,7 +12,7 @@
 
       #header
         #logo
-          = image_tag "indyrb_logo.png", :alt => "indy.rb - The Indianapolis Ruby Brigade"
+          = link_to image_tag("indyrb_logo.png", :alt => "indy.rb - The Indianapolis Ruby Brigade"), [:root]
         #meetup
           = link_to "Join Us at <img src='/images/meetup_logo.png' alt='meetup logo' />", "http://www.meetup.com/indyrb/", :alt => "join us at meetup.com"
       = flash[:notice]
