@@ -1,5 +1,11 @@
 To get up and running with the application:
  * clone this repo
  * make sure MySQL is installed and you have a password for the root user
- * run `./script/db_setup -c`
- * run `rake db:migrate`
+ * `./script/db_setup -c`
+ * `rake db:migrate`
+
+Install the gems you might need
+ * `sudo rake gems:install`
+ * `sudo RAILS_ENV=test rake gems:install`
+ * `sudo RAILS_ENV=cucumber rake gems:install`
+ * `sudo RAILS_ENV=culerity rake gems:install`
