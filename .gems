@@ -1,5 +1,6 @@
 factory_girl
 compass
 haml-edge
-rfeedparser
+feed-normalizer
 formtastic
+ruby-github
