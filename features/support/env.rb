@@ -57,3 +57,7 @@ rescue
   open_current_html_in_browser_
   raise
 end
+
+# Load support files
+$: << File.dirname(__FILE__)
+require 'sponsors'
