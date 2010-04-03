@@ -32,32 +32,37 @@ form.bp
 body.three-col
   +bgc(!m_grey)
   :font-family "Helvetica Neue", Arial, Helvetica, sans-serif
-  :font-size 75%
   #container
     +container
-  #header, #footer
-    +column(!blueprint_grid_columns)
-  #sidebar
-    // One third of the grid columns, rounding down. With 24 cols, this is 8.
-    !sidebar_columns = floor(!blueprint_grid_columns / 3)
-    +column(!sidebar_columns)
-  #content
-    // Two thirds of the grid columns, rounding up.
-    // With 24 cols, this is 16.
-    !content_columns = ceil(2 * !blueprint_grid_columns / 3)
-    // true means it's the last column in the row
-    +column(!content_columns, true)
-
-  #container
     +round(4px)
     +bgc(!white)
-    +mtop(!blueprint_grid_width + !blueprint_grid_margin)
-    #header
-      +prepend(1)
-      +ptop(!blueprint_grid_width + !blueprint_grid_margin)
-      #logo
-        +column(16)
-    #content
-      +prepend(1)
+    +mtop(!col_width)
+    +mbot(!col_width)
 
-      #lolwut
+  #header, #footer
+    +column(!blueprint_grid_columns)
+    +prepend(1)
+    +ptop(!col_width)
+    #logo
+      +column(16)
+
+  #content
+    !content_columns = ceil(!blueprint_grid_columns / 2) - 1
+    +column(!content_columns, true)
+    +prepend(1)
+    +ptop(!col_width)
+    +pbot(!col_width)
+
+  #sidebar
+    !sidebar_columns = floor(!blueprint_grid_columns / 2) - 1
+    +column(!sidebar_columns)
+    +prepend(1)
+    +ptop(!col_width/2)
+    +pbot(!col_width)
+    #next_meeting
+      +prepend(1)
+      +ptop(!col_width/2)
+      +pbot(!col_width/2)
+      +column(!sidebar_columns - 2)
+      +bgc(!l_grey)
+      +round(4px)
