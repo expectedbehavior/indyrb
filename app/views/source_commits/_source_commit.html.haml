@@ -1,0 +1,20 @@
+- content_tag_for :div, source_commit do
+  %ul
+    %li
+      %strong Url:
+      =h source_commit.url
+    %li
+      %strong Project name:
+      =h source_commit.project_name
+    %li
+      %strong User:
+      =h source_commit.user
+    %li
+      %strong Message:
+      =h source_commit.message
+    %li
+      %strong Committed date:
+      =h source_commit.committed_date
+    = link_to 'Show', source_commit
+    = link_to 'Edit', edit_source_commit_path(source_commit)
+    = link_to 'Destroy', source_commit, :confirm => 'Are you sure?', :method => :delete
