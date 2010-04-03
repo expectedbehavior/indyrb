@@ -45,7 +45,7 @@ class Admin::FeedsController < ApplicationController
     respond_to do |format|
       if @feed.save
         flash[:notice] = 'Feed was successfully created.'
-        format.html { redirect_to(@feed) }
+        format.html { redirect_to :admin_feeds }
         format.xml  { render :xml => @feed, :status => :created, :location => @feed }
       else
         format.html { render :action => "new" }
@@ -62,7 +62,7 @@ class Admin::FeedsController < ApplicationController
     respond_to do |format|
       if @feed.update_attributes(params[:feed])
         flash[:notice] = 'Feed was successfully updated.'
-        format.html { redirect_to(@feed) }
+        format.html { redirect_to :admin_feeds }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -78,7 +78,7 @@ class Admin::FeedsController < ApplicationController
     @feed.destroy
 
     respond_to do |format|
-      format.html { redirect_to(feeds_url) }
+      format.html { redirect_to :admin_feeds }
       format.xml  { head :ok }
     end
   end
