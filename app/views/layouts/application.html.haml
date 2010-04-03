@@ -14,6 +14,5 @@
           = image_tag "indyrb_logo.png", :alt => "indy.rb - The Indianapolis Ruby Brigade"
         #meetup
           = link_to "Join Us at <img src='/images/meetup_logo.png' alt='meetup logo' />", "http://www.meetup.com/indyrb/", :alt => "join us at meetup.com"
-      #content
-        = flash[:notice]
-        = yield
+      = flash[:notice]
+      = yield
