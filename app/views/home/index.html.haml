@@ -7,12 +7,13 @@
   #where
     %h2 When and Where?
     %p We meet the second Wednesday of every month!
-    %p 
+    %p.address 
       nFrame Disaster Recovery Conference Room
       %br
       550 Congressional Blvd.
       %br
       Carmel, IN 46032
+
     %h3 How to find us
     %p Use the south entrance of the building, room is the first one on the left. If you're having trouble getting in or finding the place, please call Eli @ 317 457 4595.
   #member_actions
@@ -26,9 +27,10 @@
 #sidebar
   #next_meeting
     %h2 Next Meeting
-    %h3 April 14 @ 7PM
-    %ul
-      %li Continuous Integration w/ Signal by Miles Z. Sterrett
-      %li Rails Internals - Active Record Association
-      %li Bubble Bobble Tournament
-    <iframe width="310" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=550+congressional+blvd,+carmel,+in&amp;sll=37.0625,-95.677068&amp;sspn=63.255964,135.263672&amp;ie=UTF8&amp;hq=&amp;hnear=550+Congressional+Blvd,+Carmel,+Hamilton,+Indiana+46032&amp;ll=39.961037,-86.149099&amp;spn=0.002467,0.003315&amp;z=17&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=550+congressional+blvd,+carmel,+in&amp;sll=37.0625,-95.677068&amp;sspn=63.255964,135.263672&amp;ie=UTF8&amp;hq=&amp;hnear=550+Congressional+Blvd,+Carmel,+Hamilton,+Indiana+46032&amp;ll=39.961037,-86.149099&amp;spn=0.002467,0.003315&amp;z=17" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+    %h3.when Second Wednesday of every month
+    %h3
+      %a.link RSVP @ Meetup.com
+    %div.description
+    %div.map
+      %a
+        %img{:alt => "Map"}
