@@ -8,7 +8,7 @@ function updateNextMeeting(e) {
     $("#next_meeting .when").html(when.formatDate("l, F j g:i a"));
     $("#next_meeting .description").html(e.description);
     $("#next_meeting .link").attr('href', e.event_url);
-    $("#next_meeting .map").attr("href", map_url);
+    $("#next_meeting .map A").attr("href", map_url);
     $("#next_meeting .map IMG").attr("src", e.venue_map);
 
     var venue = "";
