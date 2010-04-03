@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.namespace :admin do |admin|
+    admin.resources :feeds
+  end
+  
   map.resources :feeds
 
   map.login "login", :controller => "user_sessions", :action => "new"
