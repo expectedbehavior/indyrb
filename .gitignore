@@ -29,3 +29,4 @@ public/data
 .sass-cache
 public/stylesheets/*.css
 !public/stylesheets/scaffold.css
+*.swp

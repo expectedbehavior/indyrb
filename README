@@ -1,1 +1,5 @@
-TODO
+To get up and running with the application:
+ * clone this repo
+ * make sure MySQL is installed and you have a password for the root user
+ * run `./script/db_setup -c`
+ * run `rake db:migrate`
