@@ -1,0 +1,8 @@
+%h2 Listing github_users
+- if !@github_users.empty?
+  .github_users
+    = render :partial => "github_user", :collection => @github_users
+  = will_paginate(@github_users)
+- else
+  %p There are no github_users to show yet.
+= link_to 'New github_user', new_github_user_path
