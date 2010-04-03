@@ -1,7 +1,6 @@
 require 'digest/md5'
 
 class User < ActiveRecord::Base
-  has_many :source_commits
   belongs_to :github_user
 
   acts_as_authentic do |config|
