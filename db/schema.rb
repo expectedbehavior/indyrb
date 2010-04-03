@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100403200551) do
+ActiveRecord::Schema.define(:version => 20100403201504) do
 
   create_table "source_commits", :force => true do |t|
     t.text     "url"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 20100403200551) do
     t.datetime "committed_date"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "github_id"
   end
 
   create_table "users", :force => true do |t|

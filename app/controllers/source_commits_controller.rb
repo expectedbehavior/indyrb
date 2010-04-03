@@ -33,6 +33,7 @@ class SourceCommitsController < ApplicationController
   end
 
   def index
+    SourceCommit.fetch_commits
     @source_commits = SourceCommit.paginate(:page => params[:page], :per_page => SOURCE_COMMITS_PER_PAGE)
     respond_to do |format|
       format.html

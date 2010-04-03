@@ -1,7 +1,7 @@
 Feature: Showing source commits
   In order to see what has been worked on lately by Indy.rb members
   As a visitor
-  I want to see a list of commits
+  I want to see a list of github commits
 
   @1 @shouldwork @happy_case
   Scenario: Display a list of commits
