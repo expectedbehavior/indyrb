@@ -15,7 +15,7 @@
       #header
         %ul#menu
           =tab_for(:home, root_url, :label => 'home')
-          =tab_for(:members, root_url, :label => 'members')
+          =tab_for(:members, members_url, :label => 'members')
           =tab_for(:blogs, root_url, :label => 'blogs')
 
         #logo
@@ -31,7 +31,7 @@
           %ul
             %li.sponsor
               = link_to image_tag("new_relic_logo.gif", :alt => "New Relic"), "http://www.newrelic.com/"
-              %p 
+              %p
                 New Relic RPM is a Ruby on Rails Performance Management solution that enables developers to quickly and cost effectively detect, diagnose, and fix application performance problems in real time.
             %li.sponsor
               = link_to image_tag("nframe_logo.gif", :alt => "nframe"), "http://www.nframe.com/"

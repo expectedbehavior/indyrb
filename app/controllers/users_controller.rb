@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+
+  before_filter :set_current_tab
+
   # GET /users
   # GET /users.xml
   def index
@@ -82,4 +85,11 @@ class UsersController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  private
+
+    def set_current_tab
+      @current_tab = 'members'
+    end
+
 end
