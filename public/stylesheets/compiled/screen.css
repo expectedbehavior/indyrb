@@ -456,7 +456,7 @@ body.three-col {
       display: inline;
       float: left;
       margin-right: 10px;
-      width: 630px; }
+      width: 710px; }
       /* line 101, ../../../../../.gem/ruby/1.8.7/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
       * html body.three-col #header #logo, * html body.three-col #footer #logo {
         overflow-x: hidden; }
