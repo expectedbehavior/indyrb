@@ -15,4 +15,4 @@ Feature: Logging in
     And I fill in "Email" with "billy@example.com"
     And I fill in "Password" with "secret"
     And I press "Submit"
-    And I should see "Hi"
+    And I should see "Login successful!"

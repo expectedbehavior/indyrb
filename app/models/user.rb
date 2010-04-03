@@ -3,11 +3,7 @@ require 'digest/md5'
 class User < ActiveRecord::Base
   belongs_to :github_user
 
-  acts_as_authentic do |config|
-    config.validate_email_field false
-    config.validate_password_field false
-    config.ignore_blank_passwords true
-  end
+  acts_as_authentic
 
   attr_protected :admin
 
