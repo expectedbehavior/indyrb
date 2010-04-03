@@ -7,6 +7,8 @@
 // Import the non-default scaffolding module.
 @import blueprint/modules/scaffolding.sass
 
+@import compass/utilities/lists.sass
+
 @import partials/colors.sass
 
 @import partials/spacing.sass
@@ -32,6 +34,10 @@ form.bp
 body.three-col
   +bgc(!m_grey)
   :font-family "Helvetica Neue", Arial, Helvetica, sans-serif
+
+  p
+    :margin-bottom 1em
+
   #container
     +container
     +round(4px)
@@ -40,25 +46,55 @@ body.three-col
     +mbot(!col_width)
 
   #header, #footer
-    +column(!blueprint_grid_columns)
+    +column(!blueprint_grid_columns - 2)
     +prepend(1)
-    +ptop(!col_width)
+    +append(1)
     #logo
       +column(16)
 
+  #header
+    +ptop(!col_width)
+    #meetup
+      a
+        :text-decoration none
+        :font-size 1.25em
+        img
+          :position relative
+          :top 15px
+          :left 3px
+  #footer
+    +bgc(!taupe)
+    +ptop(!col_width/4)
+    +pbot(!col_width)
+    +round-bottom(4px)
+    #sponsors
+      h2
+        :margin-bottom 0.5em
+      img
+        :height 53px
+      ul
+        +inline-list
+        li
+          +column(6)
+          +bgc(!white)
+          +round(4px)
+          :height 185px
+          :margin-right 20px
+          :padding 20px 20px 0
+          :width 230px
   #content
     !content_columns = ceil(!blueprint_grid_columns / 2) - 1
     +column(!content_columns, true)
     +prepend(1)
     +ptop(!col_width)
-    +pbot(!col_width)
+    +pbot(!col_width/2)
 
   #sidebar
     !sidebar_columns = floor(!blueprint_grid_columns / 2) - 1
     +column(!sidebar_columns)
     +prepend(1)
     +ptop(!col_width/2)
-    +pbot(!col_width)
+    +pbot(!col_width/2)
     #next_meeting
       +prepend(1)
       +ptop(!col_width/2)

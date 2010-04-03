@@ -17,3 +17,20 @@
           = link_to "Join Us at <img src='/images/meetup_logo.png' alt='meetup logo' />", "http://www.meetup.com/indyrb/", :alt => "join us at meetup.com"
       = flash[:notice]
       = yield
+
+      #footer
+        %h2 Our Sponsors
+        #sponsors
+          %ul
+            %li.sponsor
+              = link_to image_tag("new_relic_logo.gif", :alt => "New Relic"), "http://www.newrelic.com/"
+              %p 
+                New Relic RPM is a Ruby on Rails Performance Management solution that enables developers to quickly and cost effectively detect, diagnose, and fix application performance problems in real time.
+            %li.sponsor
+              = link_to image_tag("nframe_logo.gif", :alt => "nframe"), "http://www.nframe.com/"
+              %p
+                n|Frame has 15 years of experience providing professional technology infrastructure services to Indianapolis and Indiana organizations of all sizes
+            %li.sponsor
+              = link_to image_tag("fastest_forward_logo.jpeg", :alt => "Fastest Forward"), "http://fastestforward.com/"
+              %p
+                Fastest Forward specialize in delivering high quality software quickly. By using the latest proven technologies, Fastest Forward can assemble reliable systems in a fraction of the time and cost.
