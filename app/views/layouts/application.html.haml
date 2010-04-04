@@ -23,7 +23,7 @@
         #meetup
           = link_to "Join Us at <img src='/images/meetup_logo.png' alt='meetup logo' />", "http://www.meetup.com/indyrb/", :alt => "join us at meetup.com"
       = flash[:notice]
-      = yield
+      = yield(:content) or yield
 
       #footer
         %h2 Our Sponsors

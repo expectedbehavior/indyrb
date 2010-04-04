@@ -3,11 +3,6 @@ class FeedsController < ApplicationController
   # GET /feeds.xml
   def index
     @feeds = Feed.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @feeds }
-    end
   end
 
   # GET /feeds/1
