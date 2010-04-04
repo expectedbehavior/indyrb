@@ -24,7 +24,6 @@ Rails::Initializer.run do |config|
   config.gem 'ruby-github'
   config.gem 'formtastic'
   config.gem 'feed-normalizer'
-
   
   
   # Settings in config/environments/* take precedence over those specified here.
