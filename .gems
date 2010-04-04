@@ -4,3 +4,4 @@ haml-edge
 feed-normalizer
 formtastic
 ruby-github
+rfeedparser
