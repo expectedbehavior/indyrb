@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   attr_protected :admin
 
   def github_url
-    github.present? ? "http://github.com/#{github}" : nil
+    github_user.try(:name).present? ? "http://github.com/#{github_user.name}" : nil
   end
 
   def meetup_url

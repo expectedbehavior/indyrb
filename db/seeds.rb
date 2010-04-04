@@ -9,16 +9,19 @@
 users = [
   { :name => 'Dave Jones',     :github => 'unixmonkey',   :twitter => 'unixmonkey',   :meetup => '4656402', :email => 'unixmonkey1@gmail.com'  },
   { :name => 'Miles Sterrett', :github => 'mileszs',      :twitter => 'mileszs',      :meetup => '7552573', :email => 'miles.sterrett@gmail.com' },
-  { :name => 'Matt Gordon',    :github => 'systematic',   :twitter => 'esquivalient', :meetup => '9648110', :email => '' },
-  { :name => 'Joel Meador',    :github => 'janxious',     :twitter => 'joelmeador',   :meetup => '767579',  :email => '' },
+  { :name => 'Matt Gordon',    :github => 'systematic',   :twitter => 'esquivalient', :meetup => '9648110', :email => 'matt@expectedbehavior.com' },
+  { :name => 'Joel Meador',    :github => 'janxious',     :twitter => 'joelmeador',   :meetup => '767579',  :email => 'joel@expectedbehavior.com' },
   { :name => 'Nolan Eakins',   :github => 'sneakin',      :twitter => 'sneakin',      :meetup => '1636703', :email => 'nolan@eakins.net' }
 ]
 
 users.each do |user|
-  User.find_or_create_by_name(:name    => user[:name],
-                              :github  => user[:github],
-                              :twitter => user[:twitter],
-                              :meetup  => user[:meetup],
-                              :email   => user[:email])
+  u = User.find_or_create_by_name(:name    => user[:name],
+                                  :twitter => user[:twitter],
+                                  :meetup  => user[:meetup],
+                                  :email   => user[:email],
+                                  :password => 'password',
+                                  :password_confirmation => 'password')
+  u.update_attributes(:github_user => GithubUser.new(:name => user[:github]))
 end
+
 puts "#{User.count} Users Seeded"
