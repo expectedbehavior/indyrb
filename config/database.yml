@@ -1,53 +1,15 @@
-# MySQL.  Versions 4.1 and 5.0 are recommended.
-#
-# Install the MySQL driver:
-#   gem install mysql
-# On Mac OS X:
-#   sudo gem install mysql -- --with-mysql-dir=/usr/local/mysql
-# On Mac OS X Leopard:
-#   sudo env ARCHFLAGS="-arch i386" gem install mysql -- --with-mysql-config=/usr/local/mysql/bin/mysql_config
-#       This sets the ARCHFLAGS environment variable to your native architecture
-# On Windows:
-#   gem install mysql
-#       Choose the win32 build.
-#       Install MySQL and put its /bin directory on your path.
-#
-# And be sure to use new-style password hashing:
-#   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
 development:
-  adapter: mysql
-  encoding: utf8
-  reconnect: false
-  database: mailnag_development
-  pool: 5
-  username: mailnag_dev
-  password: YRsyW2TJC30q728i
-  socket: <%= %w(/var/run/mysqld/mysqld.sock /tmp/mysql.sock /var/lib/mysql/mysql.sock).detect {|p| File.exist? p} %>
+  adapter: sqlite3
+  database: db/dev.sqlite3
 
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
-test: &TEST
-  adapter: mysql
-  encoding: utf8
-  reconnect: false
-  database: mailnag_test
-  pool: 5
-  username: mailnag_test
-  password: O8S18PGUQz4LDoQv
-  socket: <%= %w(/var/run/mysqld/mysqld.sock /tmp/mysql.sock /var/lib/mysql/mysql.sock).detect {|p| File.exist? p} %>
+test:
+  adapter: sqlite3
+  database: db/test.sqlite3
 
-production:
-  adapter: mysql
-  encoding: utf8
-  reconnect: false
-  database: mailnag_production
-  pool: 5
-  username: mailnag_prod
-  password: 8JBVWAjs245BSE07 
-  socket: <%= %w(/var/run/mysqld/mysqld.sock /tmp/mysql.sock /var/lib/mysql/mysql.sock).detect {|p| File.exist? p} %>
+cucumber:
+  adapter: sqlite3
+  database: db/test.sqlite3
 
-cucumber: &CUCUMBER
-  <<: *TEST
 culerity:
-  <<: *CUCUMBER
+  adapter: sqlite3
+  database: db/test.sqlite3

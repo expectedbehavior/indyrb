@@ -9,14 +9,13 @@ module NavigationHelpers
     case page_name
     when /the login page/
       login_path
-
     when /the signup page/
       signup_path
-
-    
     when /the home\s?page/
       '/'
-    
+    when /the admin sponsors page/
+      admin_sponsors_path
+
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

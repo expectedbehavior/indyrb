@@ -1,0 +1,9 @@
+%li
+  %a{:href => list_item.url}
+    - if list_item.logo.exists?
+      %img{:src => list_item.logo.url, :alt => list_item.name}
+    - else
+      = list_item.name
+  %p
+    = list_item.description
+  

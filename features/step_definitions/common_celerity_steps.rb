@@ -59,15 +59,15 @@ When /^I press "(.*)"$/ do |button|
   end
 end
 
-Then /^I should see a button labelled "([^\"]*)"$/ do |button_label|
+Then /^I should see a button label+ed "([^\"]*)"$/ do |button_label|
   $browser.button(:value, button_label).html
 end
 
-Then /^I should see a link labelled "([^\"]*)"$/ do |link_label|
+Then /^I should see a link label+ed "([^\"]*)"$/ do |link_label|
   print_page_on_error { $browser.link(:text, link_label).html }
 end
 
-Then /^I should not see a link labelled "([^\"]*)"$/ do |text|
+Then /^I should not see a link label+ed "([^\"]*)"$/ do |text|
   assert ! $browser.link(:text, text).exists?, "incorrectly found a link with text #{text}}"
 end
 
@@ -145,12 +145,12 @@ When /I check "(.*)"/ do |field|
   $browser.check_box(:id, find_label(field).for).set(true)
 end
 
-Then /I should see a "(.*)" labelled "(.*)"/ do |field_type, label_text|
+Then /I should see a "(.*)" label+ed "(.*)"/ do |field_type, label_text|
   print_page_on_error do
     begin
       assert $browser.send(field_type, :id, find_label(label_text).for)
     rescue
-      puts "Couldn't find '#{field_type}' labelled '#{label_text}'"
+      puts "Couldn't find '#{field_type}' labeled '#{label_text}'"
       raise
     end
   end

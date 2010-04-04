@@ -1,6 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :sponsors
+
   map.namespace :admin do |admin|
     admin.resources :feeds
+    admin.resources :sponsors
   end
   
   map.resources :feeds

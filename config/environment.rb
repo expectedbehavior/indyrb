@@ -21,7 +21,6 @@ require File.join(File.dirname(__FILE__), 'boot')
 Rails::Initializer.run do |config|
   config.gem 'factory_girl', :source => 'http://gemcutter.org'
   config.gem 'compass'
-  config.gem 'rfeedparser'
   config.gem 'formtastic'
 
   # Settings in config/environments/* take precedence over those specified here.

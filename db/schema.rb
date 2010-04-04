@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100403195808) do
+ActiveRecord::Schema.define(:version => 20100403234622) do
 
   create_table "feeds", :force => true do |t|
     t.string   "feed_title"
@@ -18,6 +18,19 @@ ActiveRecord::Schema.define(:version => 20100403195808) do
     t.text     "post_title"
     t.text     "post_content"
     t.text     "post_link"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sponsors", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "url"
+    t.boolean  "active"
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
+    t.datetime "logo_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

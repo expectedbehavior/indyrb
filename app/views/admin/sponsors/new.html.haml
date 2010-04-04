@@ -1,0 +1,10 @@
+%h1 New Sponsor
+- semantic_form_for(@sponsor, :url => admin_sponsors_path, :html => { :multipart => true }) do |f|
+  = f.error_messages
+  = f.input :name
+  = f.input :url
+  = f.file_field :logo
+  = f.text_area :description
+  = f.check_box :active
+  = f.label :active
+  = f.buttons

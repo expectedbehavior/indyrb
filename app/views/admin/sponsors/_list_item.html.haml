@@ -1,0 +1,9 @@
+%li
+  %a{:href => edit_admin_sponsor_path(list_item)}
+    - if list_item.logo.exists?
+      %img{:src => list_item.logo.url(:small), :alt => list_item.name}
+    - else
+      = list_item.name
+  %p
+    = list_item.description
+  
