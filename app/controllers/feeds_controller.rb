@@ -1,4 +1,6 @@
 class FeedsController < ApplicationController
+  before_filter :set_current_tab
+
   # GET /feeds
   # GET /feeds.xml
   def index
@@ -76,5 +78,11 @@ class FeedsController < ApplicationController
       format.html { redirect_to(feeds_url) }
       format.xml  { head :ok }
     end
+  end
+
+  private
+
+  def set_current_tab
+    @current_tab = 'featured'
   end
 end

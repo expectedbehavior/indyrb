@@ -19,7 +19,7 @@
         %ul#menu
           =tab_for(:home, root_url, :label => 'home')
           =tab_for(:members, members_url, :label => 'members')
-          =tab_for(:blogs, root_url, :label => 'blogs')
+          =tab_for(:featured, feeds_url, :label => 'featured')
 
         #logo
           = link_to image_tag("indyrb_logo.png", :alt => "indy.rb - The Indianapolis Ruby Brigade"), [:root]
