@@ -2,6 +2,7 @@
 # Likewise, all the methods added will be available for all controllers.
 
 class ApplicationController < ActionController::Base
+  before_filter :set_current_tab
   helper_method :current_user_session, :current_user
   include ExceptionNotifiable
   helper :all # include all helpers, all the time
@@ -54,6 +55,10 @@ class ApplicationController < ActionController::Base
   def redirect_back_or_default(default)
     redirect_to(session[:return_to] || default)
     session[:return_to] = nil
+  end
+
+  def set_current_tab
+    @current_tab = 'home'
   end
   
 end
