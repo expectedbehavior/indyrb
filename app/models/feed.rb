@@ -11,12 +11,16 @@ class Feed < ActiveRecord::Base
   end
   
   def get_latest_entry
-    latest_entry = FeedParser.parse(self.feed_uri).entries.first
+    latest_entry = FeedNormalizer::FeedNormalizer.parse(open(self.feed_uri)).entries.first
+    #FeedParser.parse(self.feed_uri).entries.first
     return false unless latest_entry
     
+    
     self.post_title   = latest_entry.title
-    self.post_content = latest_entry.summary_detail.value
-    self.post_link    = latest_entry.link
+#    self.post_content = latest_entry.summary_detail.value
+    self.post_content = latest_entry.content
+#    self.post_link    = latest_entry.link
+    self.post_link    = latest_entry.url
     self.save
   end
 end
