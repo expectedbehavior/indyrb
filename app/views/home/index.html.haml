@@ -1,3 +1,6 @@
+- content_for :javascript do
+  $(document).ready(function() { getEvent(); });
+
 #content
   #what
     %h2 What is it?
@@ -33,4 +36,5 @@
     %div.description
     %div.map
       %a
-        %img{:alt => "Map"}
+        %img{:src => "http://maps.google.com/staticmap?center=39.959174,-86.149637&zoom=14&size=512x512&maptype=mobile&markers=39.959174,-86.149637,blues&key=ABQIAAAAiB79SpLrOxrYbOzqaYGrvhQrNhSbWhQbZXKDt0w9V4y2n6CzahTrHTbQjuSGhL4xdTPFH0lRNNe4-A&sensor=false",
+             :alt => "Map"}

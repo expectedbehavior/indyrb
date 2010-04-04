@@ -1,7 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :github_users
 
-  map.resources :source_commits
+  map.resources :source_commits, :only => [:show, :index]
 
   map.namespace :admin do |admin|
     admin.resources :feeds
