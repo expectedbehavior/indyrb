@@ -1,0 +1,8 @@
+%h2 Listing featured_projects
+- if !@featured_projects.empty?
+  .featured_projects
+    = render :partial => "featured_project", :collection => @featured_projects
+  = will_paginate(@featured_projects)
+- else
+  %p There are no featured_projects to show yet.
+= link_to 'New featured project', new_admin_featured_project_path

@@ -1,0 +1,4 @@
+%h2 New featured_project
+= render :partial => "form", :locals => {:featured_project => @featured_project}
+%ul
+  %li= link_to 'Back', admin_featured_projects_path
