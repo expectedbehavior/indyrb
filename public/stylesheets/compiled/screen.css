@@ -569,7 +569,7 @@ body.three-col {
         /* line 101, ../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
         * html body.three-col #footer #sponsors ul li {
           overflow-x: hidden; }
-  /* line 112, ../../../app/stylesheets/screen.sass */
+  /* line 113, ../../../app/stylesheets/screen.sass */
   body.three-col #content {
     display: inline;
     float: left;
@@ -581,7 +581,7 @@ body.three-col {
     /* line 101, ../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
     * html body.three-col #content {
       overflow-x: hidden; }
-  /* line 119, ../../../app/stylesheets/screen.sass */
+  /* line 120, ../../../app/stylesheets/screen.sass */
   body.three-col #sidebar {
     display: inline;
     float: left;
@@ -593,7 +593,7 @@ body.three-col {
     /* line 101, ../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
     * html body.three-col #sidebar {
       overflow-x: hidden; }
-    /* line 125, ../../../app/stylesheets/screen.sass */
+    /* line 126, ../../../app/stylesheets/screen.sass */
     body.three-col #sidebar #next_meeting {
       padding-left: 40px;
       padding-top: 20px;
@@ -609,15 +609,55 @@ body.three-col {
       /* line 101, ../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
       * html body.three-col #sidebar #next_meeting {
         overflow-x: hidden; }
-      /* line 133, ../../../app/stylesheets/screen.sass */
+      /* line 134, ../../../app/stylesheets/screen.sass */
       body.three-col #sidebar #next_meeting .map A {
         display: block;
         position: relative;
         overflow: hidden;
         width: 320px;
         height: 320px; }
-        /* line 139, ../../../app/stylesheets/screen.sass */
+        /* line 140, ../../../app/stylesheets/screen.sass */
         body.three-col #sidebar #next_meeting .map A IMG {
           position: absolute;
           left: -25%;
           top: -25%; }
+  /* line 145, ../../../app/stylesheets/screen.sass */
+  body.three-col #blogs_content {
+    display: inline;
+    float: left;
+    margin-right: 0;
+    width: 430px;
+    padding-left: 40px;
+    padding-top: 40px;
+    padding-bottom: 20px; }
+    /* line 101, ../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
+    * html body.three-col #blogs_content {
+      overflow-x: hidden; }
+    /* line 152, ../../../app/stylesheets/screen.sass */
+    body.three-col #blogs_content h1, body.three-col #blogs_content h2 {
+      color: #666666;
+      padding: 5px 0px; }
+    /* line 156, ../../../app/stylesheets/screen.sass */
+    body.three-col #blogs_content h1 {
+      border-bottom: 3px solid #cfcfcf;
+      padding: 10px 0px; }
+  /* line 160, ../../../app/stylesheets/screen.sass */
+  body.three-col #featured_project_sidebar {
+    display: inline;
+    float: left;
+    margin-right: 10px;
+    width: 430px;
+    padding-left: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px; }
+    /* line 101, ../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
+    * html body.three-col #featured_project_sidebar {
+      overflow-x: hidden; }
+    /* line 167, ../../../app/stylesheets/screen.sass */
+    body.three-col #featured_project_sidebar #featured_project {
+      border-radius: 4px;
+      -moz-border-radius: 4px;
+      -webkit-border-radius: 4px;
+      background-color: #efdeaf;
+      margin-top: 25px;
+      padding: 10px; }

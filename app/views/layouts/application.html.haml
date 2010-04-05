@@ -2,6 +2,7 @@
 %html{ :lang => "en" }
   %head
     %meta{ :charset => "utf-8" }
+    %link{ :rel => 'shortcut icon', :type => 'image/x-icon', :href => '/images/favicon.gif' }
     %title Indy.rb
     = stylesheet_link_tag 'compiled/screen.css', :media => 'screen, projection'
     = stylesheet_link_tag 'compiled/print.css', :media => 'print'
@@ -9,6 +10,8 @@
       = stylesheet_link_tag 'compiled/ie.css', :media => 'screen, projection'
     = javascript_include_tag :defaults
     = javascript_include_tag 'formatdate'
+    %script{:type => 'text/javascript'}
+      = yield :javascript
   %body.bp.three-col
     #container
 
@@ -16,14 +19,14 @@
         %ul#menu
           =tab_for(:home, root_url, :label => 'home')
           =tab_for(:members, members_url, :label => 'members')
-          =tab_for(:blogs, root_url, :label => 'blogs')
+          =tab_for(:featured, feeds_url, :label => 'featured')
 
         #logo
           = link_to image_tag("indyrb_logo.png", :alt => "indy.rb - The Indianapolis Ruby Brigade"), [:root]
         #meetup
           = link_to "Join Us at <img src='/images/meetup_logo.png' alt='meetup logo' />", "http://www.meetup.com/indyrb/", :alt => "join us at meetup.com"
       = flash[:notice]
-      = yield
+      = yield(:content) or yield
 
       #footer
         %h2 Our Sponsors
@@ -31,7 +34,7 @@
           %ul
             %li.sponsor
               = link_to '<img src="/images/sponsors/new_relic.gif" alt="New Relic"/>', "http://www.newrelic.com/"
-              %p 
+              %p
                 <a href="http://www.newrelic.com/RPM.html" target="_blank">New Relic RPM</a> is a Ruby on Rails Performance Management solution that enables developers to quickly and cost effectively detect, diagnose, and fix application performance problems in real time. <a href='http://www.newrelic.com'>www.NewRelic.com</a>
             %li.sponsor
               = link_to '<img src="/images/sponsors/nframe.gif" alt="n|Frame"/>', "http://www.nframe.com/"
