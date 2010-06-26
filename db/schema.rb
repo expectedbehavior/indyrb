@@ -9,11 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(:version => 20100404004852) do
-=======
 ActiveRecord::Schema.define(:version => 20100626215107) do
->>>>>>> 638c61af16d2b4bf7caa4dc279ced96d7f239aae
 
   create_table "featured_projects", :force => true do |t|
     t.string   "name"
