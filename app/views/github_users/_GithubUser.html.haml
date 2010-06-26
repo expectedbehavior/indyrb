@@ -1,8 +1,0 @@
-- content_tag_for :div, github_user do
-  %ul
-    %li
-      %strong Name:
-      =h github_user.name
-    = link_to 'Show', github_user
-    = link_to 'Edit', edit_github_user_path(github_user)
-    = link_to 'Destroy', github_user, :confirm => 'Are you sure?', :method => :delete

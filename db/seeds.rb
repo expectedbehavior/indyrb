@@ -15,13 +15,15 @@ users = [
 ]
 
 users.each do |user|
-  u = User.find_or_create_by_name(:name    => user[:name],
-                                  :twitter => user[:twitter],
-                                  :meetup  => user[:meetup],
-                                  :email   => user[:email],
-                                  :password => 'password',
-                                  :password_confirmation => 'password')
-  u.update_attributes(:github_user => GithubUser.new(:name => user[:github]))
+  u = User.find_or_create_by_name({
+    :name    => user[:name],
+    :twitter => user[:twitter],
+    :meetup  => user[:meetup],
+    :email   => user[:email],
+    :github  => user[:github],
+    :password => 'password',
+    :password_confirmation => 'password'
+  })
 end
 
 puts "#{User.count} Users Seeded"
