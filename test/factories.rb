@@ -5,6 +5,9 @@ Factory.define(:user) do |u|
   u.password_confirmation "password"
 end
 
+Factory.define(:admin, :parent => :user) do |u|
+end
+
 Factory.define(:github_user) do |u|
   u.sequence(:name) { |n| "githubname#{n}" }
 end

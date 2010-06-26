@@ -35,7 +35,6 @@ class ApplicationController < ActionController::Base
       store_location
       flash[:notice] = "You must be logged in to access this page"
       redirect_to new_user_session_url
-      return false
     end
   end
 
@@ -44,7 +43,13 @@ class ApplicationController < ActionController::Base
       store_location
       flash[:notice] = "You must be logged out to access this page"
       redirect_to account_url
-      return false
+    end
+  end
+  
+  def require_admin
+    unless current_user.try(:admin?)
+      flash[:notice] = "You must be an administrator to access this page"
+      redirect_to root_path
     end
   end
   

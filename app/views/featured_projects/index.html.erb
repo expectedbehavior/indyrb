@@ -1,0 +1,13 @@
+<div id="featured-projects">
+  <h2>Featured Projects</h2>
+  <% @featured_projects.each do |featured_project| %>
+    <div class="featured-project">
+      <h3><%= link_to h(featured_project.name), featured_project.url %></h2>
+      <div>Author: <%= link_to h(featured_project.author), featured_project.author_url %></div>
+      <p>
+        <%=h featured_project.description %>
+      </p>
+    </div>
+  <% end %>
+  <%= will_paginate @featured_projects %>
+</div>

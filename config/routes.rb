@@ -9,7 +9,8 @@ ActionController::Routing::Routes.draw do |map|
   end
   
   map.resources :feeds
-
+  map.resources :featured_projects, :only => [:index, :show]
+  
   map.login "login", :controller => "user_sessions", :action => "new"
   map.logout "logout", :controller => "user_sessions", :action => "destroy"
   map.signup "signup", :controller => "users", :action => "new"
