@@ -4,8 +4,7 @@
   </div>    
   <div id="featured_project_sidebar">
     <div id="featured_project">
-      <h2>Featured Project</h2>
-      <h1><%= link_to h(@featured_project.name), @featured_project.url -%></h1>
+      <h2>Featured Project - <%= link_to h(@featured_project.name), @featured_project.url -%></h2>
       <%= simple_format(h(@featured_project.description)) %>
     </div>
   </div>
