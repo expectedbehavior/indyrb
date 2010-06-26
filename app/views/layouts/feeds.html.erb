@@ -5,7 +5,8 @@
   <div id="featured_project_sidebar">
     <div id="featured_project">
       <h2>Featured Project</h2>
-      <p>Some stuff about some awesome project that is awesome so you should totally check it out now!</p>
+      <h1><%= link_to h(@featured_project.name), @featured_project.url -%></h1>
+      <%= simple_format(h(@featured_project.description)) %>
     </div>
   </div>
 <% end -%>

@@ -5,6 +5,7 @@ class FeedsController < ApplicationController
   # GET /feeds.xml
   def index
     @feeds = Feed.all
+    @featured_project = FeaturedProject.last
   end
 
   # GET /feeds/1

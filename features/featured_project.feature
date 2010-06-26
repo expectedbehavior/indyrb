@@ -3,7 +3,7 @@ Feature: Featured Projects
   As a visitor
   I want to see the featured project box and info
 
-  @1 @shouldwork @happy_case
+  @1 @shouldwork @happy_case @wip
   Scenario: Create and view featured project
     Given there is a user named "Indy.rb Test"
     When I view the admin featured projects page
