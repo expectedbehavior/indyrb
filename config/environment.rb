@@ -21,7 +21,7 @@ require File.join(File.dirname(__FILE__), 'boot')
 Rails::Initializer.run do |config|
   config.gem 'factory_girl', :source => 'http://gemcutter.org'
   config.gem 'compass'
-  config.gem 'ruby-github'
+  config.gem 'octopi'
   config.gem 'formtastic'
   config.gem 'feed-normalizer'
   config.gem 'authlogic'

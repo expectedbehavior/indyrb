@@ -3,7 +3,7 @@ class SourceCommit < ActiveRecord::Base
 
   def self.fetch_commits
     User.all.each do |user|
-      api_user = GitHub::API.user(user.github)
+      api_user = Octopi::User.find(user.github)
       api_user.repositories.each do |repository|
         repository.commits.each do |commit|
           unless SourceCommit.find_by_github_id(commit.id)
