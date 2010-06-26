@@ -44,7 +44,6 @@ Before do
 end
 
 require 'factory_girl'
-require "#{RAILS_ROOT}/test/factories.rb"
 require "#{RAILS_ROOT}/db/bootstrap.rb"
 
 Before do

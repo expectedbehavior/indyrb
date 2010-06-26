@@ -18,9 +18,9 @@ development:
   adapter: mysql
   encoding: utf8
   reconnect: false
-  database: mailnag_development
+  database: indyrb_development
   pool: 5
-  username: mailnag_dev
+  username: indyrb_dev
   password: YRsyW2TJC30q728i
   socket: <%= %w(/var/run/mysqld/mysqld.sock /tmp/mysql.sock /var/lib/mysql/mysql.sock).detect {|p| File.exist? p} %>
 
@@ -31,9 +31,9 @@ test: &TEST
   adapter: mysql
   encoding: utf8
   reconnect: false
-  database: mailnag_test
+  database: indyrb_test
   pool: 5
-  username: mailnag_test
+  username: indyrb_test
   password: O8S18PGUQz4LDoQv
   socket: <%= %w(/var/run/mysqld/mysqld.sock /tmp/mysql.sock /var/lib/mysql/mysql.sock).detect {|p| File.exist? p} %>
 
@@ -41,9 +41,9 @@ production:
   adapter: mysql
   encoding: utf8
   reconnect: false
-  database: mailnag_production
+  database: indyrb_production
   pool: 5
-  username: mailnag_prod
+  username: indyrb_prod
   password: 8JBVWAjs245BSE07 
   socket: <%= %w(/var/run/mysqld/mysqld.sock /tmp/mysql.sock /var/lib/mysql/mysql.sock).detect {|p| File.exist? p} %>
 

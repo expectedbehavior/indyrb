@@ -3,10 +3,12 @@ Factory.define(:user) do |u|
   u.sequence(:name) { |n| "John Doe#{n}" }
   u.password "password"
   u.password_confirmation "password"
+  u.github { |u|
+    u.name
+  }
 end
 
-Factory.define(:github_user) do |u|
-  u.sequence(:name) { |n| "githubname#{n}" }
+Factory.define(:admin, :parent => :user) do |u|
 end
 
 Factory.define(:featured_project) do |fp|

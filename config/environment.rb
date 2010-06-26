@@ -24,8 +24,7 @@ Rails::Initializer.run do |config|
   config.gem 'ruby-github'
   config.gem 'formtastic'
   config.gem 'feed-normalizer'
-
-  
+  config.gem 'authlogic'
   
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers

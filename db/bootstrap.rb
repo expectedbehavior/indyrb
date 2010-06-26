@@ -9,3 +9,9 @@ Bootstrapper.for :test do |b|
   b.truncate_tables :all
 end
 
+# Bootstrapper.for :seed_users do |b|
+#   { 
+  
+  
+#   }
+# end 
