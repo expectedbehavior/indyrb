@@ -1,5 +1,4 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :github_users
 
   map.resources :source_commits, :only => [:show, :index]
 
