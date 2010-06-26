@@ -1,14 +1,12 @@
 require 'digest/md5'
 
 class User < ActiveRecord::Base
-  belongs_to :github_user
-
   acts_as_authentic
 
   attr_protected :admin
 
   def github_url
-    github_user.try(:name).present? ? "http://github.com/#{github_user.name}" : nil
+    github.present? ? "http://github.com/#{github}" : nil
   end
 
   def meetup_url
