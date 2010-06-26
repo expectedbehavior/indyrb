@@ -15,3 +15,7 @@ Given /^I am logged in$/ do
   And %Q{I fill in "Password" with "secret"}
   When %Q{I press "Submit"}
 end
+
+Given /^the users github username is "([^\"]*)"$/ do |github_username|
+  @recent_user.update_attributes(:github => github_username)  
+end
