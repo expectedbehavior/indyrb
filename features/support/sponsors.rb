@@ -7,7 +7,7 @@ module SponsorsHelpers
 
   def with_sponsor(info)
     with_tag("a[href=?]", info['url']) do
-      with_tag("img[src=?][alt=?]", File.join("/images/sponsors", info['image']), info['name'])
+      with_tag("img[alt=?]", info['name'])
     end
     with_tag("p", info['description'])
   end
