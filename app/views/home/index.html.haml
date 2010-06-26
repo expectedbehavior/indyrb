@@ -5,12 +5,12 @@
   #what
     %h2 What is it?
     %p Ruby Enthusiasts in Indianapolis. We meet monthly to talk about cool ruby stuff.
-    %p If you are interested in Ruby or Rails, come on down no matter your experience level.
-    %p Free pizza at meeting and a free beer at Brockway Pub after meeting.
+    %p If you are interested in <a href='http://www.ruby-lang.org'>Ruby</a> or <a href='http://www.rubyonrails.org'>Rails</a>, come on down no matter your experience level.
+    %p Free pizza at the meeting and post-meeting socializing at the <a href='http://www.myspace.com/brockwaypub'>Brockway Pub</a>.
   #where
     %h2 When and Where?
     %p We meet the second Wednesday of every month!
-    %p.address 
+    %p.address
       nFrame Disaster Recovery Conference Room
       %br
       550 Congressional Blvd.
@@ -18,14 +18,16 @@
       Carmel, IN 46032
 
     %h3 How to find us
-    %p Use the south entrance of the building, room is the first one on the left. If you're having trouble getting in or finding the place, please call Eli @ 317 457 4595.
+    %p Use the south entrance of the building, room is the first one on the left. If you're having trouble getting in or finding the place, please call Dave @ 317 270 8253.
   #member_actions
     %h2 What are our users doing?
     %p
       = link_to "Github stuff"
       = link_to "friend feed"
       = link_to "tweeetz"
-
+    #github
+      = content_for(:javascript) do
+        = render :partial => "github_feed"
       
 #sidebar
   #next_meeting
