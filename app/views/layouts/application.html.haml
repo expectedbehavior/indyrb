@@ -20,6 +20,7 @@
         %ul#menu
           =tab_for(:home, root_url, :label => 'home')
           =tab_for(:members, members_url, :label => 'members')
+          =tab_for(:feeds, feeds_url, :label => 'feeds')
           =tab_for(:featured, featured_projects_url, :label => 'featured')
           - if current_user.try(:admin?)
             =tab_for(:members, admin_feeds_url, :label => 'admin:feeds')
@@ -30,7 +31,7 @@
         #meetup
           = link_to "Join Us at <img src='/images/meetup_logo.png' alt='meetup logo' />", "http://www.meetup.com/indyrb/", :alt => "join us at meetup.com"
       = flash[:notice]
-      = (c = yield(:content)).present? ? c : yield
+      = yield
 
       #footer
         %h2 Our Sponsors
