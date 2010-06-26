@@ -4,7 +4,8 @@ class User < ActiveRecord::Base
   acts_as_authentic
 
   attr_protected :admin
-
+  has_many :source_commits
+  
   def github_url
     if github.present? 
       "http://github.com/#{github}"
