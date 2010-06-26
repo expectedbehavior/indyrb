@@ -6,19 +6,27 @@ class User < ActiveRecord::Base
   attr_protected :admin
 
   def github_url
-    github.present? ? "http://github.com/#{github}" : nil
+    if github.present? 
+      "http://github.com/#{github}"
+    end.to_s
   end
 
   def meetup_url
-    meetup.present? ? "http://meetup.com/members/#{meetup}" : nil
+    if meetup.present? 
+      "http://meetup.com/members/#{meetup}"
+    end.to_s
   end
 
   def twitter_url
-    twitter.present? ? "http://twitter.com/#{twitter}" : nil
+    if twitter.present? 
+      "http://twitter.com/#{twitter}"
+    end.to_s
   end
 
   def gravatar_url
-    email.present? ? "http://www.gravatar.com/avatar/#{Digest::MD5.hexdigest(email.downcase)}" : nil
+    if email.present? 
+      "http://www.gravatar.com/avatar/#{Digest::MD5.hexdigest(email.downcase)}"
+    end.to_s
   end
-
+  
 end
