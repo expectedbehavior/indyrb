@@ -105,10 +105,10 @@ body.three-col
           +column(6)
           +bgc(!white)
           +round(4px)
-          :height 185px
           :margin-right 20px
           :padding 20px 20px 0
           :width 230px
+
   #content
     !content_columns = ceil(!blueprint_grid_columns / 2) - 1
     +column(!content_columns, true)
@@ -140,3 +140,31 @@ body.three-col
             :position absolute
             :left -25%
             :top -25%
+
+  #blogs_content
+    !content_columns = ceil(!blueprint_grid_columns / 2) - 1
+    +column(!content_columns, true)
+    +prepend(1)
+    +ptop(!col_width)
+    +pbot(!col_width/2)
+
+    h1, h2
+      :color = !d_grey
+      :padding 5px 0px
+
+    h1
+      :border-bottom = 3px solid !m_grey
+      :padding 10px 0px
+
+  #featured_project_sidebar
+    !sidebar_columns = floor(!blueprint_grid_columns / 2) - 1
+    +column(!sidebar_columns)
+    +prepend(1)
+    +ptop(!col_width/2)
+    +pbot(!col_width/2)
+
+    #featured_project 
+      +round(4px)
+      +bgc(!taupe)
+      :margin-top 25px
+      :padding 10px

@@ -1,0 +1,7 @@
+%h1 Featured Blogs
+- @feeds.each do |feed|
+  %h2
+    %a{:href => feed.post_link}
+      = feed.post_title
+  %p
+    = feed.post_content

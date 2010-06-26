@@ -1,0 +1,20 @@
+- content_tag_for :div, featured_project do
+  %ul
+    %li
+      %strong Name:
+      =h featured_project.name
+    %li
+      %strong Url:
+      =h featured_project.url
+    %li
+      %strong Description:
+      =h featured_project.description
+    %li
+      %strong Author:
+      =h featured_project.author
+    %li
+      %strong Author url:
+      =h featured_project.author_url
+    = link_to 'Show', [:admin, featured_project]
+    = link_to 'Edit', [:edit, :admin, featured_project]
+    = link_to 'Destroy', [:admin, featured_project], :confirm => 'Are you sure?', :method => :delete

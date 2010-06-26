@@ -1,0 +1,7 @@
+Move the event fetching from JS and into the app (rate limits) via CRUD
+CRUD sponsors
+CRUD feature projects
+CRUD meetings [summaries]
+GitHub/project integration
+Security audit (controller perms and such)
+Blog aggregation

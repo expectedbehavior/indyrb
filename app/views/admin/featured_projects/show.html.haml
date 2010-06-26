@@ -1,0 +1,21 @@
+%h2= "Admin::FeaturedProject \"#{@featured_project.to_param}\""
+- content_tag_for :div, @featured_project do
+  %ul
+    %li
+      %strong Name:
+      =h @featured_project.name
+    %li
+      %strong Url:
+      =h @featured_project.url
+    %li
+      %strong Description:
+      =h @featured_project.description
+    %li
+      %strong Author:
+      =h @featured_project.author
+    %li
+      %strong Author url:
+      =h @featured_project.author_url
+%ul
+  %li= link_to 'Edit', [:edit, :admin, @featured_project]
+  %li= link_to 'Back', admin_featured_projects_path

@@ -1,4 +1,5 @@
 Bootstrapper.for :development do |b|
+  Factory.create(:featured_project)
 end
 
 Bootstrapper.for :production do |b|

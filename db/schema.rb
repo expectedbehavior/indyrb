@@ -9,7 +9,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20100403224106) do
+=======
+ActiveRecord::Schema.define(:version => 20100404004852) do
+
+  create_table "featured_projects", :force => true do |t|
+    t.string   "name"
+    t.string   "url"
+    t.text     "description"
+    t.string   "author"
+    t.string   "author_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+>>>>>>> b5913a573e802d4b0e66a3b83204062405851cd7
 
   create_table "feeds", :force => true do |t|
     t.string   "feed_title"
@@ -47,7 +61,6 @@ ActiveRecord::Schema.define(:version => 20100403224106) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
-    t.string   "github"
     t.string   "twitter"
     t.string   "meetup"
     t.boolean  "admin"
