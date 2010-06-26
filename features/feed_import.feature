@@ -5,7 +5,9 @@ Feature: Import Indy.rb Member Blog Posts
 
   @gordwip
   Scenario: Add a new feed
-    Given I am logged in as an admin
+    Given there is a user named "Captain Admin"
+    And that User has "admin" set to "true"
+    And I am logged in
     And I am on the "Add Feed" page
     When I fill in "Feed Name" with "Miles' Tumblr"
     And I fill in "Feed URI" with "http://mileszs.tumblr.com/rss"
