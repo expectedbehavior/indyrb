@@ -6,7 +6,6 @@ Feature: Showing source commits
   @1 @shouldwork @happy_case
   Scenario: Display a list of commits
     Given there is a user named "Indy.rb Test"
-    And there is a github user named "indyrbtest"
-    And that user belongs to that github user
+    And the users github username is "indyrbtest"
     When I view the commits page
     Then I should see "test readme"
