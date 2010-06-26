@@ -25,7 +25,9 @@
       = link_to "Github stuff"
       = link_to "friend feed"
       = link_to "tweeetz"
-
+    #github
+      = content_for(:javascript) do
+        = render :partial => "github_feed"
       
 #sidebar
   #next_meeting

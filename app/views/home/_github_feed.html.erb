@@ -1,0 +1,20 @@
+google.load("feeds", "1");
+
+function initialize() {
+	var feed = new google.feeds.Feed("https://github.com/indyrb.private.atom?token=a2ceaf32175e43ad7c229b0e6dd519f1");
+	feed.load(function(result) {
+		if (!result.error) {
+			var container = document.getElementById("github");
+			for (var i = 0; i < result.feed.entries.length; i++) {
+				var entry = result.feed.entries[i];
+				var div = document.createElement("div");
+	div.setAttribute('class', 'item');
+				div.appendChild(document.createTextNode(entry.title));
+	/*var div = document.createElement(result.feed.entries[i]);*/
+				container.appendChild(div);
+	console.log(result.feed.entries[i]);
+			}
+		}
+	});
+}
+google.setOnLoadCallback(initialize);
