@@ -193,7 +193,7 @@ When /I choose "(.*)"/ do |field|
   $browser.radio(:id, (find_label(field).for rescue field)).set(true)
 end
 
-When /^I (go to|am on|view) ([^\"]+)$/ do |x, path|
+When /^I (go to|go to the|am on|view) ([^\"]+)$/ do |x, path|
   print_page_on_error { $browser.goto @host + path_to(path) }
   assert_successful_response
 end
