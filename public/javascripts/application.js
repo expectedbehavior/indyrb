@@ -21,10 +21,9 @@ function updateNextMeeting(e) {
 }
 
 function getEvent() {
-    $.getJSON("http://api.meetup.com/events.json/?topic=ruby&groupnum=89&key=6a7801841e16295e1e722e254370&callback=?",
-	      function(data) {
-		  if(data.results) {
-  		    updateNextMeeting(data.results[0]);
-		  }
-	      } );
+    $.getJSON("http://api.meetup.com/events.json/?topic=ruby&groupnum=89&key=6a7801841e16295e1e722e254370&callback=?", function(data) {
+        if(data.results) {
+            updateNextMeeting(data.results[0]);
+        }
+    });
 }
