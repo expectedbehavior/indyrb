@@ -1,4 +1,4 @@
-class Admin::FeaturedProjectsController < ApplicationController
+class Admin::FeaturedProjectsController < AdminController
 
   before_filter :find_featured_project
 
