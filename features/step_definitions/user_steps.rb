@@ -12,8 +12,9 @@ end
 Given /^I am logged in$/ do
   When %Q{I view the login page}
   And %Q{I fill in "Email" with "#{@recent_user.email}"}
-  And %Q{I fill in "Password" with "secret"}
+  And %Q{I fill in "Password" with "password"}
   When %Q{I press "Submit"}
+  Then %Q(I should see "Login successful!")
 end
 
 Given /^the users github username is "([^\"]*)"$/ do |github_username|
