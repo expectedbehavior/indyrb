@@ -20,6 +20,9 @@
           =tab_for(:home, root_url, :label => 'home')
           =tab_for(:members, members_url, :label => 'members')
           =tab_for(:featured, feeds_url, :label => 'featured')
+          - if current_user.try(:admin?)
+            =tab_for(:members, admin_feeds_url, :label => 'admin:feeds')
+            =tab_for(:featured, admin_featured_projects_url, :label => 'admin:projects')
 
         #logo
           = link_to image_tag("indyrb_logo.png", :alt => "indy.rb - The Indianapolis Ruby Brigade"), [:root]
