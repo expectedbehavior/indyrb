@@ -17,6 +17,15 @@
     #container
 
       #header
+        #login
+          - if current_user
+            = link_to "logout", logout_path
+          - else
+            = link_to "signup", signup_path
+            |
+            = link_to "login", login_path
+          
+
         %ul#menu
           =tab_for(:home, root_url, :label => 'home')
           =tab_for(:members, members_url, :label => 'members')
