@@ -84,6 +84,6 @@ class FeedsController < ApplicationController
   private
 
   def set_current_tab
-    @current_tab = 'featured'
+    @current_tab = 'feeds'
   end
 end

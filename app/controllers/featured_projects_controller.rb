@@ -7,5 +7,11 @@ class FeaturedProjectsController < ApplicationController
   def show
     @featured_project = FeaturedProject.find(params[:id])
   end
+
+  private
+  
+  def set_current_tab
+    @current_tab = 'featured'
+  end
   
 end
