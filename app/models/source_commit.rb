@@ -3,6 +3,7 @@ class SourceCommit < ActiveRecord::Base
 
   def self.fetch_commits
     User.all.each do |user|
+      next if user.github.blank?
       api_user = Octopi::User.find(user.github)
       api_user.repositories.each do |repository|
         repository.commits.each do |commit|
