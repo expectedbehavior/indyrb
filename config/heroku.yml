@@ -1,0 +1,5 @@
+apps:
+  # shorthand: heroku app
+  production: newindyrb
+  # staging: awesomeapp-staging
+  # demo: awesomeapp-demo
