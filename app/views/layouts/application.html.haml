@@ -19,6 +19,8 @@
       #header
         #login
           - if current_user
+            = link_to "edit profile", [:edit, current_user]
+            |
             = link_to "logout", logout_path
           - else
             = link_to "signup", signup_path

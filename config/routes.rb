@@ -5,6 +5,7 @@ ActionController::Routing::Routes.draw do |map|
   map.namespace :admin do |admin|
     admin.resources :feeds
     admin.resources :featured_projects
+    admin.resources :users
   end
   
   map.resources :feeds
