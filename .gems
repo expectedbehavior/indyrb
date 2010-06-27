@@ -1,6 +1,7 @@
-factory_girl
+rails --version 2.3.5
+factory_girl --source http://gemcutter.org
 compass
-haml-edge
-feed-normalizer
+octopi
 formtastic
-ruby-github
+feed-normalizer
+authlogic
