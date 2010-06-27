@@ -20,7 +20,7 @@ module NavigationHelpers
       admin_featured_projects_path
 
     when /the featured projects page/
-      feeds_path
+      featured_projects_path
     
     when /the home\s?page/
       '/'
