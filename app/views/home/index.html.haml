@@ -11,14 +11,16 @@
     %h2 When and Where?
     %p We meet the second Wednesday of every month!
     %p.address
-      nFrame Disaster Recovery Conference Room
+      = @meetup.venue_name
       %br
-      550 Congressional Blvd.
+      = @meetup.venue_address1
       %br
-      Carmel, IN 46032
+      = @meetup.venue_address2
+      %br
+      = "#{@meetup.venue_city}, #{@meetup.venue_state} #{@meetup.venue_zip}"
 
     %h3 How to find us
-    %p Use the south entrance of the building, room is the first one on the left. If you're having trouble getting in or finding the place, please call Dave @ 317 270 8253.
+    %p= @meetup.how_to_find_us + " " + @meetup.venue_phone
   #member_actions
     %h2 What are our users doing?
     %p
@@ -32,11 +34,12 @@
 #sidebar
   #next_meeting
     %h2 Next Meeting
-    %h3.when Second Wednesday of every month
-    %h3
-      %a.link RSVP @ Meetup.com
+    %h3.when
+      %a.link{:href => @meetup.event_url}= Time.parse(@meetup.time).to_s(:long)
+    %p
+      %a.link{:href => @meetup.event_url} RSVN now!
     %div.description
+      = @meetup.description.gsub(/(<br \/>){2,}/, '<br />')
     %div.map
-      %a
-        %img{:src => "http://maps.google.com/staticmap?center=39.959174,-86.149637&zoom=14&size=512x512&maptype=mobile&markers=39.959174,-86.149637,blues&key=ABQIAAAAiB79SpLrOxrYbOzqaYGrvhQrNhSbWhQbZXKDt0w9V4y2n6CzahTrHTbQjuSGhL4xdTPFH0lRNNe4-A&sensor=false",
-             :alt => "Map"}
+      %a{:href => "http://maps.google.com/?q=#{@meetup.venue_address1.gsub(' ', '+')}+#{@meetup.venue_city}+#{@meetup.venue_state}+#{@meetup.venue_zip}"}
+        %img{:src => @meetup.venue_map, :alt => "Map"}
